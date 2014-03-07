@@ -22,5 +22,5 @@ alias wget='wget -c'
 alias df='df -H'
 alias du='du -ch'
 
-alias runserver='python manage.py runserver'
-alias shell='python manage.py shell'
+alias runserver='python manage.py runserver_plus'
+alias shell='python manage.py shell_plus'
