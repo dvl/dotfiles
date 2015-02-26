@@ -3,6 +3,7 @@
 	email = contato@xdvl.info
 [core]
 	editor = vim
-
 [alias]
-        ac = !git add -A && git commit
+	ac = !git add -A && git commit
+[push]
+	default = simple
