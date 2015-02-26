@@ -1,0 +1,24 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  handle_size = -3
+  inactive_color_offset = 0.89
+[keybindings]
+[profiles]
+  [[default]]
+    use_system_font = False
+    background_darkness = 0.81
+    background_type = transparent
+    background_image = None
+    foreground_color = "#b3b3b3"
+    font = Source Code Pro Medium 10
+    background_color = "#131926"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

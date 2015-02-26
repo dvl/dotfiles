@@ -22,5 +22,11 @@ alias wget='wget -c'
 alias df='df -H'
 alias du='du -ch'
 
-alias runserver='python manage.py runserver_plus'
+alias rs='python manage.py runserver'
+alias fs='foreman start'
 alias shell='python manage.py shell_plus'
+alias m='python manage.py'
+
+alias sublimefuck="kill $(ps aux | grep '[s]ubl' | awk '{print $2}')"
+
+function gi() { curl -s http://www.gitignore.io/api/$@ ;}

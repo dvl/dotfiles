@@ -1,2 +1,12 @@
-*~
+*.pid
 *.pyc
+*.log
+*.sublime-project
+*.sublime-workspace
+*.ipynb
+.DS_Store
+*.dev
+.venv
+.idea
+.ipynb_checkpoints
+Thumbs.db
