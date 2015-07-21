@@ -1,0 +1,12 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"Package Control",
+		"SublimeGit",
+		"Terminal"
+	]
+}
