@@ -9,3 +9,5 @@
 	fuck = reset HEAD --hard
 [push]
 	default = simple
+[merge]
+        ff = false
