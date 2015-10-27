@@ -7,7 +7,10 @@
 [alias]
 	ac = !git add -A && git commit
 	fuck = reset HEAD --hard
+	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
 [push]
 	default = simple
 [merge]
         ff = false
+[tag]
+	sort = version:refname
