@@ -19,3 +19,12 @@ alias dm='docker-machine'
 alias rs='python manage.py runserver'
 alias fs='forego start'
 alias m='python manage.py'
+
+eval "$(thefuck --alias)"
+
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONUNBUFFERED=1
+
+if [[ -s "/home/$USER/.gvm/scripts/gvm" ]]; then
+  source "/home/$USER/.gvm/scripts/gvm"
+fi
