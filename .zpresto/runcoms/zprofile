@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nano'
+export VISUAL='nano'
 export PAGER='less'
 
 #
@@ -42,13 +42,8 @@ typeset -gU cdpath fpath mailpath path
 # )
 
 # Set the list of directories that Zsh searches for programs.
-
-export GOPATH=$HOME/go
-
 path=(
   /usr/local/{bin,sbin}
-  /usr/local/go/bin
-  /home/$USER/go/bin
   $path
 )
 
@@ -77,8 +72,3 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-
-# OTHERS
-
-export PYTHONDONTWRITEBYTECODE=1
-export PYTHONUNBUFFERED=1
