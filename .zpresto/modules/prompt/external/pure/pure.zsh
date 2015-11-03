@@ -76,7 +76,7 @@ prompt_pure_string_length() {
 # venv
 prompt_virtualenv_info() {
   if [[ -n $VIRTUAL_ENV ]]; then
-    printf " [%s]" ${${VIRTUAL_ENV}:t}
+    printf "%s" ${${VIRTUAL_ENV}:t}
   fi
 }
 
@@ -85,15 +85,15 @@ prompt_pure_preprompt_render() {
 	[[ -n ${prompt_pure_cmd_timestamp+x} && "$1" != "precmd" ]] && return
 
 	# set color for git branch/dirty status, change color if dirty checking has been delayed
-	local git_color=242
+	local git_color=cyan
 	[[ -n ${prompt_pure_git_delay_dirty_check+x} ]] && git_color=red
 
 	# construct prompt, beginning with path
 	local prompt="%F{blue}%~%f"
 	# venv
-	prompt+="%F{green}${prompt_pure_venv}%f"
+	prompt+=" [%F{green}${prompt_pure_venv}%f]"
 	# git info
-	prompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
+	prompt+=" [%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f]"
 	# git pull/push arrows
 	prompt+="%F{cyan}${prompt_pure_git_arrows}%f"
 	# username and machine if applicable
@@ -162,7 +162,7 @@ prompt_pure_async_git_dirty() {
 
 	cd "$1"
 	command test -n "$(git status --porcelain --ignore-submodules ${umode})"
-	(($? == 0)) && echo "*"
+	(($? == 0)) && echo "%F{red}*%F"
 }
 
 prompt_pure_async_git_fetch() {
@@ -252,8 +252,8 @@ prompt_pure_setup() {
 
 	zstyle ':vcs_info:*' enable git
 	zstyle ':vcs_info:*' use-simple true
-	zstyle ':vcs_info:git*' formats ' %b'
-	zstyle ':vcs_info:git*' actionformats ' %b|%a'
+	zstyle ':vcs_info:git*' formats '%b'
+	zstyle ':vcs_info:git*' actionformats '%b|%a'
 
 	# show username@host if logged in through SSH
 	[[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username=' %F{242}%n@%m%f'
