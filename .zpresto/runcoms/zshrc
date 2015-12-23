@@ -47,11 +47,7 @@ alias dm='docker-machine'
 
 eval "$(thefuck --alias)"
 
-# env
-
-export PYTHONDONTWRITEBYTECODE=1
-export PYTHONUNBUFFERED=1
-
 if [[ -s "/home/$USER/.gvm/scripts/gvm" ]]; then
   source "/home/$USER/.gvm/scripts/gvm"
 fi
+
