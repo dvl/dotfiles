@@ -1,3 +1,28 @@
+"" Vundle
+set nocompatible
+
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+" plugins
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+
+filetype plugin indent on
+
+"" Base Config
+set nobackup
+set noswapfile
+
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -44,7 +69,6 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "" Visual Settings
-
 syntax on
 set ruler
 set number
