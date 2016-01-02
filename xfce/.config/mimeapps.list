@@ -1,0 +1,14 @@
+[Added Associations]
+application/sql=sublime_text.desktop;
+image/jpeg=ristretto.desktop;
+x-scheme-handler/mailto=exo-mail-reader.desktop
+inode/directory=exo-file-manager.desktop
+x-scheme-handler/trash=exo-file-manager.desktop
+image/png=ristretto.desktop;
+application/x-bittorrent=deluge.desktop;
+text/plain=mousepad.desktop;
+application/x-desktop=mousepad.desktop;
+application/xml=mousepad.desktop;
+
+[Default Applications]
+application/x-bittorrent=deluge.desktop
