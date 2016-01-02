@@ -1,11 +1,24 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
 		"Anaconda",
+		"Color Highlighter",
+		"Djaneiro",
+		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
+		"Emmet",
+		"Git Conflict Resolver",
+		"GitGutter",
+		"JSLint",
+		"JSON Reindent",
 		"Package Control",
+		"Package Syncing",
+		"requirementstxt",
+		"SideBarEnhancements",
 		"SublimeGit",
 		"Terminal"
 	]
