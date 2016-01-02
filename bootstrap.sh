@@ -38,6 +38,7 @@ stow \
 terminator \
 tmux \
 tree \
+ttf-mscorefonts-installer \
 vim \
 wget \
 whois \
