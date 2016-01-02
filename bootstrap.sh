@@ -13,6 +13,7 @@ autofs \
 build-essential \
 cifs-utils \
 curl \
+deluge \
 git \
 google-chrome-stable \
 htop \
