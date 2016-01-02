@@ -32,6 +32,7 @@ python-pip \
 python-software-properties \
 python3-dev \
 python3-pip \
+python3.5-dev \
 stow \
 terminator \
 tmux \
