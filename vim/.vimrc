@@ -60,12 +60,30 @@ set softtabstop=2
 " remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
+" Key mappings
+
 let mapleader=","
 
 vnoremap <silent> <leader>y :w !xsel -i -b<CR>
 nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
 nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
 nnoremap <silent> <Leader>e :Explore<CR>
+
+" Clean search (highlight)
+nnoremap <silent> <leader><space> :noh<cr>
+
+" Buffer navigation
+nnoremap <Leader>q :bprev<Return>
+nnoremap <Leader>w :bnext<Return>
+
+"" Show the buffer number in the status line.
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+" Window navigation
+noremap <C-h> :wincmd h<CR>
+noremap <C-j> :wincmd j<CR>
+noremap <C-k> :wincmd k<CR>
+noremap <C-l> :wincmd l<CR>
 
 " ┏━╸┏━┓┏┳┓┏┳┓┏━┓┏┓╻╺┳┓┏━┓
 " ┃  ┃ ┃┃┃┃┃┃┃┣━┫┃┗┫ ┃┃┗━┓
@@ -125,25 +143,6 @@ set nowrap
 " Always show the statusline
 set laststatus=2
 
-" Tab navigation
-nnoremap <C-Right> :tabn<CR>
-nnoremap <C-Left>  :tabprev<CR>
-
-inoremap <C-Right> <Esc>:tabn<CR><Insert>
-inoremap <C-Left>  <Esc>:tabprev<CR><Insert>
-
-nnoremap <C-t>     :tabnew<CR>
-"nnoremap <C-w>     :tabclose<CR>
-
-inoremap <C-t>     <Esc>:tabnew<CR>
-"inoremap <C-w>     <Esc>:tabclose<CR>
-
-" Window navigation
-noremap <C-h> :wincmd h<CR>
-noremap <C-j> :wincmd j<CR>
-noremap <C-k> :wincmd k<CR>
-noremap <C-l> :wincmd l<CR>
-
 " enable file type detection and do language-dependent indenting
 if has("autocmd")
   filetype on
@@ -155,7 +154,7 @@ endif
 " ┣━┛┃  ┃ ┃┃╺┓┃┃┗┫   ┗━┓ ┃ ┃ ┃┣╸ ┣╸
 " ╹  ┗━╸┗━┛┗━┛╹╹ ╹   ┗━┛ ╹ ┗━┛╹  ╹
 
-if 1 " boolean for plugin loading
+if 1  " boolean for plugin loading
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
 
@@ -166,16 +165,16 @@ if 1 " boolean for plugin loading
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'jmcantrell/vim-virtualenv'
   Plugin 'majutsushi/tagbar'
   Plugin 'mattn/emmet-vim'
   Plugin 'scrooloose/nerdtree'
-  Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'Yggdroot/indentLine'
   Plugin 'Valloric/YouCompleteMe'
+  Plugin 'Yggdroot/indentLine'
 
   call vundle#end()
   filetype plugin indent on
@@ -183,18 +182,18 @@ if 1 " boolean for plugin loading
   " vim-airline
   let g:airline_powerline_fonts = 1
 
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
+
   " tagbar
   nmap <F8> :TagbarToggle<CR>  " F8 toogles TabBar
 
-  " ctrlpvim
-  let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
-
   " emmet-vim
-  let g:user_emmet_leader_key = '<C-E>'
+  let g:user_emmet_leader_key = '<C-e>'
 
   " nerdtree
-  map <F2> :NERDTreeTabsToggle<CR>
+  map <F2>  :NERDTreeTabsToggle<CR>
+
+  " ctrlp
+  map <C-b> :CtrlPBuffer<CR>
 endif
