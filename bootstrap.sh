@@ -12,9 +12,12 @@ sudo apt-get install -y \
 autofs \
 build-essential \
 cifs-utils \
+cmake \
 curl \
 deluge \
 git \
+git-core \
+git-extras \
 google-chrome-stable \
 htop \
 libbz2-dev \
@@ -27,6 +30,7 @@ libssl-dev \
 libxml2-dev \
 libxslt1-dev \
 nfs-kernel-server \
+nmap \
 pgadmin3 \
 python-dev \
 python-pip \
