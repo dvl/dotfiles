@@ -20,6 +20,7 @@
 		"requirementstxt",
 		"SideBarEnhancements",
 		"SublimeGit",
-		"Terminal"
+		"Terminal",
+		"VimL"
 	]
 }
