@@ -60,12 +60,30 @@ set softtabstop=2
 " remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
+" Key mappings
+
 let mapleader=","
 
 vnoremap <silent> <leader>y :w !xsel -i -b<CR>
 nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
 nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
 nnoremap <silent> <Leader>e :Explore<CR>
+
+" Clean search (highlight)
+nnoremap <silent> <leader><space> :noh<cr>
+
+" Buffer navigation
+nnoremap <Leader>q :bprev<Return>
+nnoremap <Leader>w :bnext<Return>
+
+"" Show the buffer number in the status line.
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+
+" Window navigation
+noremap <C-h> :wincmd h<CR>
+noremap <C-j> :wincmd j<CR>
+noremap <C-k> :wincmd k<CR>
+noremap <C-l> :wincmd l<CR>
 
 " ┏━╸┏━┓┏┳┓┏┳┓┏━┓┏┓╻╺┳┓┏━┓
 " ┃  ┃ ┃┃┃┃┃┃┃┣━┫┃┗┫ ┃┃┗━┓
@@ -124,25 +142,6 @@ set nowrap
 
 " Always show the statusline
 set laststatus=2
-
-" Buffer navigation
-nnoremap <C-Right> :bnext<CR>
-nnoremap <C-Left>  :bprevious<CR>
-
-inoremap <C-Right> <Esc>:bnext<CR><Insert>
-inoremap <C-Left>  <Esc>:bprevious<CR><Insert>
-
-nnoremap <C-t>     :enew<CR>
-nnoremap <C-w>     :bd<CR>
-
-inoremap <C-t>     <Esc>:enew<CR>
-inoremap <C-w>     <Esc>:bd<CR>
-
-" Window navigation
-noremap <C-h> :wincmd h<CR>
-noremap <C-j> :wincmd j<CR>
-noremap <C-k> :wincmd k<CR>
-noremap <C-l> :wincmd l<CR>
 
 " enable file type detection and do language-dependent indenting
 if has("autocmd")
