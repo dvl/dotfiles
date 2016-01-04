@@ -1,95 +1,200 @@
-"" Vundle
+"           ██
+"          ░░
+"  ██    ██ ██ ██████████  ██████  █████
+" ░██   ░██░██░░██░░██░░██░░██░░█ ██░░░██
+" ░░██ ░██ ░██ ░██ ░██ ░██ ░██ ░ ░██  ░░
+"  ░░████  ░██ ░██ ░██ ░██ ░██   ░██   ██
+"   ░░██   ░██ ███ ░██ ░██░███   ░░█████
+"    ░░    ░░ ░░░  ░░  ░░ ░░░     ░░░░░
+"
+"  ▓▓▓▓▓▓▓▓▓▓
+" ░▓ author ▓ xero <x@xero.nu>
+" ░▓ code   ▓ http://code.xero.nu/dotfiles
+" ░▓ mirror ▓ http://git.io/.files
+" ░▓▓▓▓▓▓▓▓▓▓
+" ░░░░░░░░░░
+"
+" use vim settings, rather than vi settings
+" must be first, because it changes other options as a side effect
 set nocompatible
 
-filetype off
+" paste without auto indentation
+set paste
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-
-" plugins
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-
-" All of your Plugins must be added before the following line
-call vundle#end()
-
-filetype plugin indent on
-
-"" Base Config
-set nobackup
+" maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undo
 set noswapfile
 
-"" Encoding
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
+" lazy file name tab completion
+set wildmode=longest,list,full
+set wildmenu
+set wildignorecase
 
-"" Fix backspace indent
+" case insensitive search
+set ignorecase
+set smartcase
+
+" the /g flag on :s substitutions by default
+set gdefault
+
+" make backspace behave in a sane manner
 set backspace=indent,eol,start
 
-"" Tabs. May be overriten by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
+" searching
+set hlsearch
+set incsearch
+
+" use indents of 4 spaces
+set shiftwidth=2
+
+" tabs are spaces, not tabs
 set expandtab
 
-"" Map leader to ,
-let mapleader=','
+" an indentation every four columns
+set tabstop=2
 
-"" Enable hidden buffers
-set hidden
+" let backspace delete indent
+set softtabstop=2
 
-"" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
+" remove trailing whitespaces and ^M chars
+autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
-"" Encoding
-set bomb
-set binary
-set ttyfast
+let mapleader=","
 
-"" Directories for swp files
-set nobackup
-set noswapfile
+vnoremap <silent> <leader>y :w !xsel -i -b<CR>
+nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
+nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
+nnoremap <silent> <Leader>e :Explore<CR>
 
-set fileformats=unix,dos,mac
-set showcmd
-set shell=/bin/sh
+" ┏━╸┏━┓┏┳┓┏┳┓┏━┓┏┓╻╺┳┓┏━┓
+" ┃  ┃ ┃┃┃┃┃┃┃┣━┫┃┗┫ ┃┃┗━┓
+" ┗━╸┗━┛╹ ╹╹ ╹╹ ╹╹ ╹╺┻┛┗━┛
 
-"" session management
-let g:session_directory = "~/.vim/session"
-let g:session_autoload = "no"
-let g:session_autosave = "no"
-let g:session_command_aliases = 1
+" make ; work like : for commands (lazy shifting)
+nnoremap ; :
 
-"" Visual Settings
+" json pretty print
+command J :%!python -mjson.tool
+
+" remove trailing white space
+command Nows :%s/\s\+$//
+
+" remove blank lines
+command Nobl :g/^\s*$/d
+
+" toggle spellcheck
+command Spell :setlocal spell! spell?
+
+" ╻┏┓╻╺┳╸┏━╸┏━┓┏━╸┏━┓┏━╸┏━╸
+" ┃┃┗┫ ┃ ┣╸ ┣┳┛┣╸ ┣━┫┃  ┣╸
+" ╹╹ ╹ ╹ ┗━╸╹┗╸╹  ╹ ╹┗━╸┗━╸
+
+" show matching brackets/parenthesis
+set showmatch
+
+" disable startup message
+set shortmess+=I
+
+" syntax highlighting and colors
+set t_Co=256
+set cursorline
 syntax on
-set ruler
+colorscheme molokai
+filetype off
+
+" stop unnecessary rendering
+" set lazyredraw
+
+" show line numbers
 set number
 
-set mousemodel=popup
-set t_Co=256
-set background=dark
-set guioptions=egmrti
-set gfn=Source\ Code\ Pro\ 10
-
-set incsearch
-set ignorecase
-set smartcase
-set hlsearch
-
+" no line wrapping
 set nowrap
 
-"" Disable the blinking cursor.
-set gcr=a:blinkon0
-set scrolloff=3
+" no folding
+set foldlevel=99
+set foldminlines=99
 
+" don't wrap long lines
+set nowrap
+
+" highlight column
+" set cursorcolumn
+
+" Always show the statusline
 set laststatus=2
-set showcmd
-set showmode
+
+" Tab navigation
+nnoremap <C-Right> :tabn<CR>
+nnoremap <C-Left>  :tabprev<CR>
+
+inoremap <C-Right> <Esc>:tabn<CR><Insert>
+inoremap <C-Left>  <Esc>:tabprev<CR><Insert>
+
+nnoremap <C-t>     :tabnew<CR>
+"nnoremap <C-w>     :tabclose<CR>
+
+inoremap <C-t>     <Esc>:tabnew<CR>
+"inoremap <C-w>     <Esc>:tabclose<CR>
+
+" Window navigation
+noremap <C-h> :wincmd h<CR>
+noremap <C-j> :wincmd j<CR>
+noremap <C-k> :wincmd k<CR>
+noremap <C-l> :wincmd l<CR>
+
+" enable file type detection and do language-dependent indenting
+if has("autocmd")
+  filetype on
+  filetype indent on
+  filetype plugin on
+endif
+
+" ┏━┓╻  ╻ ╻┏━╸╻┏┓╻   ┏━┓╺┳╸╻ ╻┏━╸┏━╸
+" ┣━┛┃  ┃ ┃┃╺┓┃┃┗┫   ┗━┓ ┃ ┃ ┃┣╸ ┣╸
+" ╹  ┗━╸┗━┛┗━┛╹╹ ╹   ┗━┛ ╹ ┗━┛╹  ╹
+
+if 1 " boolean for plugin loading
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+
+  Plugin 'gmarik/Vundle.vim'
+
+  " My plugins
+
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'bling/vim-airline'
+  Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'jmcantrell/vim-virtualenv'
+  Plugin 'majutsushi/tagbar'
+  Plugin 'mattn/emmet-vim'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'jistr/vim-nerdtree-tabs'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'tpope/vim-commentary'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'Yggdroot/indentLine'
+
+  call vundle#end()
+  filetype plugin indent on
+
+  " vim-airline
+  let g:airline_powerline_fonts = 1
+
+  " tagbar
+  nmap <F8> :TagbarToggle<CR>  " F8 toogles TabBar
+
+  " ctrlpvim
+  let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+  " emmet-vim
+  let g:user_emmet_leader_key = '<C-E>'
+
+  " nerdtree
+  map <F2> :NERDTreeTabsToggle<CR>
+  nmap LF :NERDTreeFind<CR>
+endif
