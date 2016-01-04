@@ -125,18 +125,12 @@ set nowrap
 " Always show the statusline
 set laststatus=2
 
-" Tab navigation
-nnoremap <C-Right> :tabn<CR>
-nnoremap <C-Left>  :tabprev<CR>
+" Buffer navigation
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left>  :bprevious<CR>
 
-inoremap <C-Right> <Esc>:tabn<CR><Insert>
-inoremap <C-Left>  <Esc>:tabprev<CR><Insert>
-
-nnoremap <C-t>     :tabnew<CR>
-"nnoremap <C-w>     :tabclose<CR>
-
-inoremap <C-t>     <Esc>:tabnew<CR>
-"inoremap <C-w>     <Esc>:tabclose<CR>
+inoremap <C-Right> <Esc>:bnext<CR><Insert>
+inoremap <C-Left>  <Esc>:bprevious<CR><Insert>
 
 " Window navigation
 noremap <C-h> :wincmd h<CR>
@@ -155,7 +149,7 @@ endif
 " ┣━┛┃  ┃ ┃┃╺┓┃┃┗┫   ┗━┓ ┃ ┃ ┃┣╸ ┣╸
 " ╹  ┗━╸┗━┛┗━┛╹╹ ╹   ┗━┛ ╹ ┗━┛╹  ╹
 
-if 1 " boolean for plugin loading
+if 1  " boolean for plugin loading
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
 
@@ -165,6 +159,7 @@ if 1 " boolean for plugin loading
 
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
+  Plugin 'bling/vim-bufferline'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'jmcantrell/vim-virtualenv'
   Plugin 'majutsushi/tagbar'
