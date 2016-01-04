@@ -132,6 +132,12 @@ nnoremap <C-Left>  :bprevious<CR>
 inoremap <C-Right> <Esc>:bnext<CR><Insert>
 inoremap <C-Left>  <Esc>:bprevious<CR><Insert>
 
+nnoremap <C-t>     :enew<CR>
+nnoremap <C-w>     :bd<CR>
+
+inoremap <C-t>     <Esc>:enew<CR>
+inoremap <C-w>     <Esc>:bd<CR>
+
 " Window navigation
 noremap <C-h> :wincmd h<CR>
 noremap <C-j> :wincmd j<CR>
@@ -159,7 +165,6 @@ if 1  " boolean for plugin loading
 
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
-  Plugin 'bling/vim-bufferline'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'jmcantrell/vim-virtualenv'
   Plugin 'majutsushi/tagbar'
@@ -177,6 +182,9 @@ if 1  " boolean for plugin loading
 
   " vim-airline
   let g:airline_powerline_fonts = 1
+  
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
 
   " tagbar
   nmap <F8> :TagbarToggle<CR>  " F8 toogles TabBar
