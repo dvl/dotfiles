@@ -175,6 +175,7 @@ if 1 " boolean for plugin loading
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-fugitive'
   Plugin 'Yggdroot/indentLine'
+  Plugin 'Valloric/YouCompleteMe'
 
   call vundle#end()
   filetype plugin indent on
@@ -196,5 +197,4 @@ if 1 " boolean for plugin loading
 
   " nerdtree
   map <F2> :NERDTreeTabsToggle<CR>
-  nmap LF :NERDTreeFind<CR>
 endif
