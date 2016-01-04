@@ -165,23 +165,23 @@ if 1  " boolean for plugin loading
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'jmcantrell/vim-virtualenv'
   Plugin 'majutsushi/tagbar'
   Plugin 'mattn/emmet-vim'
   Plugin 'scrooloose/nerdtree'
-  Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'Yggdroot/indentLine'
   Plugin 'Valloric/YouCompleteMe'
+  Plugin 'Yggdroot/indentLine'
 
   call vundle#end()
   filetype plugin indent on
 
   " vim-airline
   let g:airline_powerline_fonts = 1
-  
+
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
 
@@ -189,8 +189,11 @@ if 1  " boolean for plugin loading
   nmap <F8> :TagbarToggle<CR>  " F8 toogles TabBar
 
   " emmet-vim
-  let g:user_emmet_leader_key = '<C-E>'
+  let g:user_emmet_leader_key = '<C-e>'
 
   " nerdtree
-  map <F2> :NERDTreeTabsToggle<CR>
+  map <F2>  :NERDTreeTabsToggle<CR>
+
+  " ctrlp
+  map <C-b> :CtrlPBuffer<CR>
 endif
