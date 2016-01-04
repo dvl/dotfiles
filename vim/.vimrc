@@ -181,12 +181,6 @@ if 1  " boolean for plugin loading
   " tagbar
   nmap <F8> :TagbarToggle<CR>  " F8 toogles TabBar
 
-  " ctrlpvim
-  let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
-
   " emmet-vim
   let g:user_emmet_leader_key = '<C-E>'
 
