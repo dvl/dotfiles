@@ -1,0 +1,44 @@
+{
+  "high_visibility_style": "none",
+  "search_threshold": 10000,
+
+  "bracket_styles": {
+    "default": {
+      "icon": "dot",
+      "color": "brackethighlighter.default",
+      "style": "none"
+    },
+
+    "unmatched": {
+      "icon": "question",
+      "style": "outline"
+    },
+    "curly": {
+      "icon": "curly_bracket"
+    },
+    "round": {
+      "icon": "round_bracket"
+    },
+    "square": {
+      "icon": "square_bracket"
+    },
+    "angle": {
+      "icon": "angle_bracket"
+    },
+    "tag": {
+      "icon": "tag"
+    },
+    "c_define": {
+      "icon": "hash"
+    },
+    "single_quote": {
+      "icon": "single_quote"
+    },
+    "double_quote": {
+      "icon": "double_quote"
+    },
+    "regex": {
+      "icon": "regex"
+    }
+  }
+}
