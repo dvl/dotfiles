@@ -5,7 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"Anaconda",
+		"AutoFileName",
+		"BracketHighlighter",
 		"Color Highlighter",
 		"Djaneiro",
 		"Dockerfile Syntax Highlighting",
@@ -13,6 +16,8 @@
 		"Emmet",
 		"Git Conflict Resolver",
 		"GitGutter",
+		"HTML5",
+		"Jade",
 		"JSLint",
 		"JSON Reindent",
 		"Package Control",
@@ -20,6 +25,7 @@
 		"requirementstxt",
 		"SideBarEnhancements",
 		"SublimeGit",
+		"SublimeREPL",
 		"Terminal",
 		"VimL"
 	]
