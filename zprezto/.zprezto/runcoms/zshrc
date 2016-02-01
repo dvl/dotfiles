@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 alias ls='ls -F --color'
-alias la='ls -alF --color'
+alias la='ls -alFh --color'
 alias h='history'
 alias c='clear'
 alias ..='cd ..'
