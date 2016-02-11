@@ -10,6 +10,7 @@ Install
 * stow fonts
 * stow git 
 * stow sublime
+* stow htop
 * stow terminator
 * stow vim
 * stow xfce
