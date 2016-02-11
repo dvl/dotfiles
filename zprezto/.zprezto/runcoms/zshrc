@@ -13,12 +13,20 @@ fi
 # Customize to your needs...
 
 alias ls='ls -F --color'
-alias la='ls -alF --color'
+alias la='ls -alFa --color'
 alias h='history'
 alias c='clear'
 alias ..='cd ..'
 
+alias cp='cp -r'
+alias scp='scp -r'
+alias mkdir='mkdir -p'
+
 alias apt-get='sudo apt-get'
+
+alias systemctl='sudo systemctl'
+
+alias myip='curl http://ifconfig.me/ip'
 
 alias py='ipython'
 
@@ -45,7 +53,17 @@ alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
 
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+
+alias busy="cat /dev/urandom | hexdump -C"
+
 eval "$(thefuck --alias)"
+
+# make a backup of a file
+# https://github.com/grml/grml-etc-core/blob/master/etc/zsh/zshrc
+bk() {
+  cp -a "$1" "${1}_$(date --iso-8601=seconds)"
+}
 
 if [[ -s "/home/$USER/.gvm/scripts/gvm" ]]; then
   source "/home/$USER/.gvm/scripts/gvm"
