@@ -13,6 +13,7 @@ autofs \
 build-essential \
 cifs-utils \
 cmake \
+cmatrix \
 curl \
 deluge \
 git \
@@ -29,6 +30,7 @@ libsqlite3-dev \
 libssl-dev \
 libxml2-dev \
 libxslt1-dev \
+lolcat \
 nfs-kernel-server \
 nmap \
 pgadmin3 \
