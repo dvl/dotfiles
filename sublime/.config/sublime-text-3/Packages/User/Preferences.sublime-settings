@@ -1,13 +1,22 @@
 {
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		".hg",
+		".svn",
+		"__pycache__",
+		"CVS"
+	],
 	"font_face": "Source Code Pro",
-	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Color Highlighter",
 		"JSLint",
+		"Markdown",
 		"Vintage"
 	],
 	"rulers":
@@ -15,16 +24,9 @@
 		79,
 		99
 	],
-  "folder_exclude_patterns": [
-    ".git",
-    ".hg",
-    ".svn",
-    "__pycache__",
-    "CVS",
-  ],
 	"show_encoding": true,
 	"show_line_endings": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false,
+	"word_wrap": false
 }

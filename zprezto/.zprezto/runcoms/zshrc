@@ -12,8 +12,8 @@ fi
 
 # Customize to your needs...
 
-alias ls='ls -F --color'
-alias la='ls -alF --color'
+alias ls='ls -FG'
+alias la='ls -alFG'
 alias h='history'
 alias c='clear'
 alias ..='cd ..'
@@ -51,3 +51,5 @@ if [[ -s "/home/$USER/.gvm/scripts/gvm" ]]; then
   source "/home/$USER/.gvm/scripts/gvm"
 fi
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
