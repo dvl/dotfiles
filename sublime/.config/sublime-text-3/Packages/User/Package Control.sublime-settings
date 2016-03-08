@@ -5,9 +5,10 @@
 	],
 	"installed_packages":
 	[
-		"All Autocomplete",
 		"Anaconda",
+		"All Autocomplete",
 		"AutoFileName",
+		"Base Encoder",
 		"Behat Features",
 		"BracketHighlighter",
 		"Color Highlighter",
