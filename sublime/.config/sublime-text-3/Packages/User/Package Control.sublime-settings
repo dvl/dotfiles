@@ -25,10 +25,12 @@
 		"Package Control",
 		"Package Syncing",
 		"requirementstxt",
+		"Sass",
 		"SideBarEnhancements",
 		"SublimeGit",
 		"SublimeREPL",
 		"Terminal",
-		"VimL"
+		"VimL",
+		"WakaTime"
 	]
 }
