@@ -13,7 +13,7 @@
 [push]
   default = simple
 [merge]
-        ff = false
+  ff = false
 [tag]
   sort = version:refname
 [commit]
