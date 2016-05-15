@@ -16,6 +16,7 @@
 	"ignored_packages":
 	[
 		"Color Highlighter",
+		"Fix Mac Path",
 		"JSLint",
 		"Markdown",
 		"Vintage"
