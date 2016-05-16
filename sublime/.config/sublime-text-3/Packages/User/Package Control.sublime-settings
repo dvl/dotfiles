@@ -2,12 +2,14 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"Fix Mac Path"
 	],
 	"installed_packages":
 	[
-		"Anaconda",
 		"All Autocomplete",
+		"Anaconda",
 		"AutoFileName",
+		"Babel",
 		"Base Encoder",
 		"Behat Features",
 		"BracketHighlighter",
@@ -38,6 +40,7 @@
 		"SublimeREPL",
 		"Terminal",
 		"VimL",
+		"Virtualenv",
 		"WakaTime"
 	]
 }
