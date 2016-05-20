@@ -8,6 +8,8 @@
 		"All Autocomplete",
 		"Anaconda",
 		"AutoFileName",
+		"Babel",
+		"Base Encoder",
 		"Behat Features",
 		"BracketHighlighter",
 		"Color Highlighter",
@@ -36,6 +38,8 @@
 		"SublimeGit",
 		"SublimeREPL",
 		"Terminal",
-		"VimL"
+		"VimL",
+		"Virtualenv",
+		"WakaTime"
 	]
 }

@@ -7,7 +7,9 @@
 		".hg",
 		".svn",
 		"__pycache__",
-		"CVS"
+		"CVS",
+		".sass-cache",
+		".tmp"
 	],
 	"font_face": "Source Code Pro",
 	"highlight_line": true,
@@ -15,6 +17,7 @@
 	"ignored_packages":
 	[
 		"Color Highlighter",
+		"Fix Mac Path",
 		"JSLint",
 		"Markdown",
 		"Vintage"

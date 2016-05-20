@@ -13,5 +13,4 @@ fi
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 
-export GOPATH=$HOME/go
-
+export PATH="$PATH:$HOME/.rvm/bin:/usr/local/heroku/bin"

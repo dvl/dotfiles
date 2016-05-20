@@ -19,7 +19,6 @@ deluge \
 git \
 git-core \
 git-extras \
-google-chrome-stable \
 htop \
 libbz2-dev \
 libc6-dev \
@@ -52,8 +51,5 @@ xsel \
 yui-compressor \
 zlib1g-dev \
 zsh
-
-sudo pip install -U pip
-sudo pip install virtualenvwrapper ipython
 
 sudo apt-get autoremove
