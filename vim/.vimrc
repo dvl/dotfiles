@@ -165,7 +165,6 @@ if 1  " boolean for plugin loading
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'jistr/vim-nerdtree-tabs'
   Plugin 'jmcantrell/vim-virtualenv'
   Plugin 'majutsushi/tagbar'
   Plugin 'mattn/emmet-vim'
@@ -192,7 +191,7 @@ if 1  " boolean for plugin loading
   let g:user_emmet_leader_key = '<C-e>'
 
   " nerdtree
-  map <F2>  :NERDTreeTabsToggle<CR>
+  map <F2>  :NERDTreeToggle<CR>
 
   " ctrlp
   map <C-b> :CtrlPBuffer<CR>
