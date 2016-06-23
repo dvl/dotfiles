@@ -69,5 +69,5 @@ if [[ -s "/home/$USER/.gvm/scripts/gvm" ]]; then
   source "/home/$USER/.gvm/scripts/gvm"
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
