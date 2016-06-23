@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Fix Mac Path"
 	],
 	"installed_packages":
 	[
@@ -14,6 +13,7 @@
 		"Behat Features",
 		"BracketHighlighter",
 		"Color Highlighter",
+		"ColorPick",
 		"Djaneiro",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
@@ -35,6 +35,7 @@
 		"Package Syncing",
 		"requirementstxt",
 		"Sass",
+		"SCSS",
 		"SideBarEnhancements",
 		"SublimeGit",
 		"SublimeREPL",
