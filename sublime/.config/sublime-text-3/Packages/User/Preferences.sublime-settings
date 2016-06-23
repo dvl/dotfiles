@@ -8,7 +8,8 @@
 		".svn",
 		"__pycache__",
 		"CVS",
-		".sass-cache"
+		".sass-cache",
+		".tmp"
 	],
 	"font_face": "Source Code Pro",
 	"font_size": 10,
