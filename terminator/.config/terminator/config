@@ -16,7 +16,7 @@
 [profiles]
   [[default]]
     background_color = "#131926"
-    background_darkness = 0.81
+    background_darkness = 0.8
     background_image = None
     background_type = transparent
     font = Source Code Pro Medium 10

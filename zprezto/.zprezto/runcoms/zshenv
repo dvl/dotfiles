@@ -14,3 +14,5 @@ export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 
 export PATH="$PATH:$HOME/.rvm/bin:/usr/local/heroku/bin"
+
+export PURE_PROMPT_SYMBOL=$
