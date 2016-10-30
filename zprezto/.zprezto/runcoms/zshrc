@@ -54,6 +54,8 @@ alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
 
+alias rpdb='nc -C 127.0.0.1 4444'
+
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 alias busy="cat /dev/urandom | hexdump -C"
@@ -73,3 +75,12 @@ fi
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
 fi
+
+################################################
+# Added by Oracle Instant Client Easy-Install  #
+# On Github @ bit.ly/XoqtcH                    #
+################################################
+export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
+export ORACLE_HOME=/usr/lib/oracle/12.1/client64
+export TNS_ADMIN=/usr/lib/oracle/12.1/client64/network/admin
+

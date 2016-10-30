@@ -3,7 +3,7 @@
   email = contato@xdvl.info
 [core]
   editor = vim
-  excludesfile = $HOME/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [alias]
   ac = !git add -A && git commit
   fuck = reset HEAD --hard
