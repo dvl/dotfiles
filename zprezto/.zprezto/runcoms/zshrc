@@ -75,11 +75,9 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
 fi
 
-################################################
-# Added by Oracle Instant Client Easy-Install  #
-# On Github @ bit.ly/XoqtcH                    #
-################################################
-export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
-export ORACLE_HOME=/usr/lib/oracle/12.1/client64
-export TNS_ADMIN=/usr/lib/oracle/12.1/client64/network/admin
 
+PATH="/home/andre/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/andre/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/andre/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/andre/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/andre/perl5"; export PERL_MM_OPT;

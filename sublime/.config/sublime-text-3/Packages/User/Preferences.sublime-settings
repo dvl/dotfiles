@@ -1,5 +1,7 @@
 {
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"default_line_ending": "unix",
+	"dictionary": "Packages/Language - Portuguese/Portuguese (Brazilian).dic",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -17,10 +19,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Color Highlighter",
 		"Fix Mac Path",
 		"JSLint",
-		"Markdown",
 		"Vintage"
 	],
 	"rulers":
