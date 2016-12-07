@@ -11,7 +11,10 @@
 		"__pycache__",
 		"CVS",
 		".sass-cache",
-		".tmp"
+		".tmp",
+		"bower_components",
+		"media-root",
+		"static-root"
 	],
 	"font_face": "Source Code Pro",
 	"font_size": 10,

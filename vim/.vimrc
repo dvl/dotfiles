@@ -172,7 +172,7 @@ if 1  " boolean for plugin loading
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'Valloric/YouCompleteMe'
+  " Plugin 'Valloric/YouCompleteMe'
   Plugin 'Yggdroot/indentLine'
 
   call vundle#end()
