@@ -68,17 +68,3 @@ bk() {
   cp -a "$1" "${1}_$(date --iso-8601=seconds)"
 }
 
-if [[ -s "$HOME/.gvm/scripts/gvm" ]]; then
-  source "$HOME/.gvm/scripts/gvm"
-fi
-
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  source "$HOME/.rvm/scripts/rvm"
-fi
-
-
-PATH="/home/andre/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/andre/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/andre/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/andre/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/andre/perl5"; export PERL_MM_OPT;
