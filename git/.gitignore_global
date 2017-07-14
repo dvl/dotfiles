@@ -3,6 +3,8 @@
 *.pid
 *.log
 
+.python-version
+
 *.sublime-project
 *.sublime-workspace
 .idea

@@ -11,7 +11,6 @@
 		"Autoprefixer",
 		"Babel",
 		"Base Encoder",
-		"Behat Features",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"ColorHelper",
@@ -30,7 +29,8 @@
 		"Jade",
 		"JSLint",
 		"JSON Reindent",
-		"Lucario Color Scheme",
+		"LESS",
+		"MagicPython",
 		"Markdown Preview",
 		"MarkdownEditing",
 		"MarkdownTOC",
@@ -46,6 +46,7 @@
 		"Terminal",
 		"VimL",
 		"Virtualenv",
+		"Vue Syntax Highlight",
 		"WakaTime"
 	]
 }

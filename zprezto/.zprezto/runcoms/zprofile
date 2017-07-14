@@ -45,8 +45,12 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   /usr/local/go/{bin,sbin}
+  /usr/local/heroku/bin
   $HOME/go/bin
   $HOME/.composer/vendor/bin
+  $HOME/.rvm/bin
+  $HOME/.pyenv/bin
+  $HOME/.local/share/umake/bin
   $path
 )
 
@@ -75,3 +79,4 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+

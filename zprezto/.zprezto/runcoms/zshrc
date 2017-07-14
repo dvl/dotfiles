@@ -33,12 +33,6 @@ alias py='ipython'
 
 alias top='htop'
 alias vi='vim'
-alias svi='sudo vi'
-
-alias nginxreload='sudo nginx -s reload'
-alias nginxtest='sudo nginx -t'
-
-alias ports='netstat -tulanp'
 
 alias wget='wget -c'
 
@@ -46,21 +40,20 @@ alias df='df -H'
 alias du='du -ch'
 
 alias rs='python manage.py runserver'
-alias fs='forego start'
-alias shell='python manage.py shell_plus'
 alias m='python manage.py'
-
-alias d='docker'
-alias dc='docker-compose'
-alias dm='docker-machine'
-
-alias rpdb='nc -C 127.0.0.1 4444'
 
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 alias busy="cat /dev/urandom | hexdump -C"
 
+alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
+
 eval "$(thefuck --alias)"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 # make a backup of a file
 # https://github.com/grml/grml-etc-core/blob/master/etc/zsh/zshrc
